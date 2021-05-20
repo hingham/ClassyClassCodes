@@ -31,7 +31,7 @@ export class ClassCodeApprovalService {
   }
 
   private codeIsClassy(word: string) {
-    const normalizedWord = word.toLocaleLowerCase();
+    const normalizedWord = word.toLowerCase();
 
     if (this.wordContainsDistractingSubString(normalizedWord)) {
       return false;
