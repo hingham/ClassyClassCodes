@@ -1,0 +1,43 @@
+{
+  "name": "classyclasscodes",
+  "version": "1.0.0",
+  "description": "Create approriate class codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run build && node spec/config/jasmine.js",
+    "build": "rimraf dist && tsc",
+    "preserve": "npm run build",
+    "serve": "cross-env NODE_ENV=development concurrently \"tsc --watch\" \"nodemon -q dist/index.js\"",
+    "prestart": "npm run build",
+    "start": "cross-env NODE_ENV=production node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hingham/ClassyClassCodes.git"
+  },
+  "author": "hannah-ingham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hingham/ClassyClassCodes/issues"
+  },
+  "homepage": "https://github.com/hingham/ClassyClassCodes#readme",
+  "dependencies": {
+    "@types/express": "^4.17.11",
+    "@types/jasmine": "^3.7.4",
+    "@types/node": "^15.3.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "jasmine-node": "^3.0.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "concurrently": "^6.1.0",
+    "jasmine": "^3.7.0",
+    "jasmine-ts-console-reporter": "^3.1.1",
+    "nodemon": "^2.0.7"
+  }
+}
