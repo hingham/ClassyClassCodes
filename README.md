@@ -1,4 +1,4 @@
-# ClassyClassCodes
+# Class Code Approval Application
 Application that validates codes are appropriate.
 
 ### Inputs:
